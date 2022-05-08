@@ -21,6 +21,7 @@ namespace MoodAnalyzerTest
             Assert.AreEqual(expected, actual);
         }
 
+
         [TestMethod]
         [TestCategory("Happy Mood")]
         public void TestHappyMoody()   //AAA
@@ -32,6 +33,20 @@ namespace MoodAnalyzerTest
             //Act
             string actual = moodAnalysis.AnalyseMood();
             //Assert
+            Assert.AreEqual(expected, actual);
+        }
+
+        [TestMethod]
+        [TestCategory("Null Exception")]
+        public void GivenNullMessageShouldReturnHappy()
+        {
+            //Arrange
+            string message = null;
+            string expected = "HAPPY";
+            MoodAnalysis moodAnalysis = new MoodAnalysis(message);
+            //Assert
+            string actual = moodAnalysis.AnalyseMood();
+            //Act
             Assert.AreEqual(expected, actual);
         }
 

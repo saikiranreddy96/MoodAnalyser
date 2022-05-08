@@ -1,0 +1,8 @@
+C:\Users\sai kiran\source\repos\MoodAnalyzer\bin\Debug\MoodAnalyzer.exe.config
+C:\Users\sai kiran\source\repos\MoodAnalyzer\bin\Debug\MoodAnalyzer.exe
+C:\Users\sai kiran\source\repos\MoodAnalyzer\bin\Debug\MoodAnalyzer.pdb
+C:\Users\sai kiran\source\repos\MoodAnalyzer\obj\Debug\MoodAnalyzer.csproj.AssemblyReference.cache
+C:\Users\sai kiran\source\repos\MoodAnalyzer\obj\Debug\MoodAnalyzer.csproj.SuggestedBindingRedirects.cache
+C:\Users\sai kiran\source\repos\MoodAnalyzer\obj\Debug\MoodAnalyzer.csproj.CoreCompileInputs.cache
+C:\Users\sai kiran\source\repos\MoodAnalyzer\obj\Debug\MoodAnalyzer.exe
+C:\Users\sai kiran\source\repos\MoodAnalyzer\obj\Debug\MoodAnalyzer.pdb
