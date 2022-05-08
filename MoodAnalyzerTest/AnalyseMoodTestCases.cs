@@ -36,19 +36,55 @@ namespace MoodAnalyzerTest
             Assert.AreEqual(expected, actual);
         }
 
+        //[TestMethod]
+        //[TestCategory("Null Exception")]
+        //public void GivenNullMessageShouldReturnHappy()
+        //{
+        //    //Arrange
+        //    string message = null;
+        //    string expected = "HAPPY";
+        //    MoodAnalysis moodAnalysis = new MoodAnalysis(message);
+        //    //Assert
+        //    string actual = moodAnalysis.AnalyseMood();
+        //    //Act
+        //    Assert.AreEqual(expected, actual);
+        //}
+
+        [TestCategory("Custom Exception")]
         [TestMethod]
-        [TestCategory("Null Exception")]
-        public void GivenNullMessageShouldReturnHappy()
+        public void GivenNullMoodShouldThrowMoodAnalysisException()
         {
-            //Arrange
             string message = null;
-            string expected = "HAPPY";
-            MoodAnalysis moodAnalysis = new MoodAnalysis(message);
-            //Assert
-            string actual = moodAnalysis.AnalyseMood();
-            //Act
-            Assert.AreEqual(expected, actual);
+            string expected = "Mood should not be null";
+            try
+            {
+                MoodAnalysis moodAnalysis = new MoodAnalysis(message);
+                string actual = moodAnalysis.AnalyseMood();
+                Assert.AreEqual(expected, actual);
+            }
+            catch (CustomException msg)
+            {
+                Assert.AreEqual(expected, msg.Message);
+            }
         }
 
+
+        [TestCategory("Custom Exception")]
+        [TestMethod]
+        public void GivenEmptyMoodShouldThrowMoodAnalysisException()
+        {
+            string message = "";
+            string expected = "Mood should not be empty";
+            try
+            {
+                MoodAnalysis moodAnalysis = new MoodAnalysis(message);
+                string actual = moodAnalysis.AnalyseMood();
+                Assert.AreEqual(expected, actual);
+            }
+            catch (CustomException msg)
+            {
+                Assert.AreEqual(expected, msg.Message);
+            }
+        }
     }
 }
